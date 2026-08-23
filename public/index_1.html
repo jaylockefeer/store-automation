@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>store-automation — console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="header__brand">
+    <span class="header__mark">MONTELARO</span>
+    <span class="header__sub">Operations Console</span>
+  </div>
+  <div class="header__status">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">connecting…</span>
+    <span class="header__env" id="env-badge">—</span>
+  </div>
+</header>
+
+<main class="layout">
+
+  <section class="kpi-row" id="kpi-row" aria-label="Key metrics">
+    <div class="kpi">
+      <span class="kpi__label">Ad spend · 7d</span>
+      <span class="kpi__value" id="kpi-spend">—</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi__label">Purchases · 7d</span>
+      <span class="kpi__value" id="kpi-purchases">—</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi__label">Orders logged</span>
+      <span class="kpi__value" id="kpi-orders">0</span>
+    </div>
+    <div class="kpi">
+      <span class="kpi__label">Low-stock flags</span>
+      <span class="kpi__value" id="kpi-lowstock">0</span>
+    </div>
+  </section>
+
+  <section class="ads-panel" id="ads-panel" aria-label="Ad performance">
+    <div class="panel-head">
+      <h2 class="panel-label">Ad Performance <span class="panel-label__meta">Meta · last 7 days</span></h2>
+    </div>
+    <div id="ads-content">
+      <p class="ads-empty">Loading ad account…</p>
+    </div>
+  </section>
+
+  <div class="split">
+    <section class="manifest" aria-label="Module manifest">
+      <h2 class="panel-label">Manifest</h2>
+      <ol class="manifest__list" id="manifest-list"></ol>
+    </section>
+
+    <section class="activity" aria-label="Activity log">
+      <h2 class="panel-label">Activity</h2>
+      <div class="activity__list" id="activity-list">
+        <p class="activity__empty">Waiting for the first event…</p>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <span id="uptime-text">Uptime —</span>
+  <span class="footer__dot">·</span>
+  <span>Refreshes every 15s</span>
+  <span class="footer__dot">·</span>
+  <span>#store-automation</span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
