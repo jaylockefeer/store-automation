@@ -7,7 +7,8 @@ const REQUIRED = [
   'SLACK_BOT_TOKEN',
   'SLACK_CHANNEL_ID',
   'SHOPIFY_STORE_DOMAIN',
-  'SHOPIFY_ADMIN_ACCESS_TOKEN',
+  'SHOPIFY_CLIENT_ID',
+  'SHOPIFY_CLIENT_SECRET',
   'SHOPIFY_WEBHOOK_SECRET',
 ];
 
@@ -31,7 +32,8 @@ function loadConfig() {
     },
     shopify: {
       storeDomain: process.env.SHOPIFY_STORE_DOMAIN,
-      adminAccessToken: process.env.SHOPIFY_ADMIN_ACCESS_TOKEN,
+      clientId: process.env.SHOPIFY_CLIENT_ID,
+      clientSecret: process.env.SHOPIFY_CLIENT_SECRET,
       webhookSecret: process.env.SHOPIFY_WEBHOOK_SECRET,
       apiVersion: '2025-01',
     },
