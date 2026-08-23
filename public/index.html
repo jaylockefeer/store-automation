@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>store-automation — console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header class="tag-header">
+  <div class="tag-header__left">
+    <span class="tag-header__mark">✂</span>
+    <div>
+      <h1>STORE AUTOMATION</h1>
+      <p class="tag-header__sub">operations console</p>
+    </div>
+  </div>
+  <div class="tag-header__right">
+    <span class="status-dot" id="status-dot"></span>
+    <span id="status-text">connecting…</span>
+    <span class="tag-header__env" id="env-badge">—</span>
+  </div>
+</header>
+
+<main class="layout">
+
+  <section class="manifest" aria-label="Module manifest">
+    <h2 class="panel-label">Manifest</h2>
+    <ol class="manifest__list" id="manifest-list">
+      <!-- populated by app.js -->
+    </ol>
+  </section>
+
+  <section class="activity" aria-label="Activity log">
+    <h2 class="panel-label">Activity</h2>
+    <div class="activity__list" id="activity-list">
+      <p class="activity__empty">Waiting for the first event…</p>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Quick stats">
+    <div class="stat">
+      <span class="stat__label">Uptime</span>
+      <span class="stat__value" id="stat-uptime">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat__label">Orders logged</span>
+      <span class="stat__value" id="stat-orders">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat__label">Low-stock flags</span>
+      <span class="stat__value" id="stat-lowstock">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat__label">Slack channel</span>
+      <span class="stat__value stat__value--mono">#store-automation</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="tag-footer">
+  <span>Refreshes every 15s</span>
+  <span class="tag-footer__dot">·</span>
+  <span>Module 1 of 6 live</span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
